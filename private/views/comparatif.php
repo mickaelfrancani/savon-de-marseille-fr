@@ -127,7 +127,7 @@ include ROOT . '/views/includes/header.php';
             <th data-sort="cert">Certif. <span class="sort-icon">↕</span></th>
             <th data-sort="note">Note <span class="sort-icon">↕</span></th>
             <th data-sort="prix">Prix <span class="sort-icon">↕</span></th>
-            <th class="col-acheter">Acheter</th>
+            <?php /* <th class="col-acheter">Acheter</th> */ ?>
           </tr>
         </thead>
         <tbody>
@@ -167,18 +167,7 @@ include ROOT . '/views/includes/header.php';
               </span>
             </td>
             <td style="font-weight:700;white-space:nowrap;"><?= number_format($p['prix_euros'], 2, ',', ' ') ?> €</td>
-            <td class="col-acheter">
-              <?php if (!empty($p['affiliate_url'])): ?>
-              <a href="<?= htmlspecialchars($p['affiliate_url']) ?>"
-                 class="btn btn--olive"
-                 rel="nofollow sponsored"
-                 target="_blank">
-                Voir sur Amazon
-              </a>
-              <?php else: ?>
-              <span class="btn btn--disabled" style="opacity:.45;cursor:not-allowed;">Bientot disponible</span>
-              <?php endif; ?>
-            </td>
+            <?php /* col-acheter masquée (affiliation à configurer) */ ?>
           </tr>
           <?php endforeach; ?>
         </tbody>
