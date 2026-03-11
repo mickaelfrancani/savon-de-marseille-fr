@@ -50,7 +50,7 @@
     <div class="header-inner">
       <a href="/" class="site-logo">
         Savon de Marseille
-        <span>Le guide de reference</span>
+        <span>Le guide de référence</span>
       </a>
       <button class="nav-toggle" aria-label="Menu" onclick="this.parentElement.querySelector('.site-nav').classList.toggle('open')">
         <span></span><span></span><span></span>

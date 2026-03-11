@@ -4,7 +4,7 @@
     <div class="footer-grid">
       <div class="footer-brand">
         <span class="logo-footer">Savon de Marseille</span>
-        <p>Le guide de reference sur le savon de Marseille authentique. Informations objectives, fabricants verifies, conseils pratiques.</p>
+        <p>Le guide de référence sur le savon de Marseille authentique. Informations objectives, fabricants vérifiés, conseils pratiques.</p>
         <p style="margin-top:1rem; font-size:0.8rem; opacity:0.6;">Certains liens de ce site sont des liens affilies. Cela ne modifie pas notre independance editoriale.</p>
       </div>
       <div class="footer-col">

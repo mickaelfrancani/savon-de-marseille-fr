@@ -13,8 +13,8 @@ include ROOT . '/views/includes/header.php';
 <!-- HERO -->
 <section class="hero">
   <div class="hero-inner">
-    <h1>Le guide de reference du <em>Savon de Marseille</em> authentique</h1>
-    <p class="hero-lead">Histoire, fabricants verifies, conseils pratiques et comparatif objectif. Tout ce que vous devez savoir sur ce tresor du patrimoine provencal.</p>
+    <h1>Le guide de référence du <em>Savon de Marseille</em> authentique</h1>
+    <p class="hero-lead">Histoire, fabricants vérifiés, conseils pratiques et comparatif objectif. Tout ce que vous devez savoir sur ce trésor du patrimoine provençal.</p>
     <div class="hero-btns">
       <a href="/guide" class="btn btn-primary">Lire le guide complet</a>
       <a href="/fabricants" class="btn btn-outline">Voir les fabricants</a>
