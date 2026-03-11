@@ -34,7 +34,7 @@
           <li><a href="/blog">Blog</a></li>
           <li><a href="mailto:contact@savon-de-marseille.fr">Contact</a></li>
           <li><a href="/mentions-legales/">Mentions légales</a></li>
-          <li><a href="/politique-confidentialité">Confidentialite</a></li>
+          <li><a href="/politique-confidentialite/">Confidentialité</a></li>
         </ul>
       </div>
     </div>
@@ -42,7 +42,7 @@
       <p>&copy; <?= date('Y') ?> Savon de Marseille. Tous droits réservés.</p>
       <div class="footer-legal-links">
         <a href="/mentions-legales/">Mentions légales</a>
-        <a href="/politique-confidentialité">Politique de confidentialité</a>
+        <a href="/politique-confidentialite/">Politique de confidentialité</a>
         <a href="/sitemap.xml">Sitemap</a>
       </div>
     </div>
