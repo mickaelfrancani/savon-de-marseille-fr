@@ -149,16 +149,16 @@ include ROOT . '/views/includes/header.php';
 <section class="bg-beige">
   <div class="container">
     <div style="max-width:780px; margin:0 auto; text-align:center;">
-      <h2 class="section-title">Comment reconnaitre un vrai savon de Marseille ?</h2>
-      <p style="color:var(--gris); margin-bottom:2rem;">Le marche est inonde de savons qui usurpent l'appellation. Notre guide vous apprend a faire la difference en quelques secondes.</p>
+      <h2 class="section-title">Comment reconnaître un vrai savon de Marseille ?</h2>
+      <p style="color:var(--gris); margin-bottom:2rem;">Le marché est inondé de savons qui usurpent l'appellation. Notre guide vous apprend à faire la différence en quelques secondes.</p>
       <div style="display:grid; grid-template-columns: 1fr 1fr; gap:1.5rem; text-align:left; margin-bottom:2.5rem;">
         <div style="background:var(--blanc); padding:1.5rem; border-radius:var(--radius); border:2px solid var(--vert);">
           <div style="color:var(--vert); font-weight:700; font-size:1.1rem; margin-bottom:0.8rem;">Le vrai</div>
           <ul style="color:var(--brun); font-size:0.9rem; line-height:1.8; padding-left:1.2rem;">
             <li>72% minimum d'huiles végétales</li>
-            <li>Fabriqué a Marseille ou en Provence</li>
-            <li>Mentions gravees sur le cube</li>
-            <li>Methode au chaudron traditionnelle</li>
+            <li>Fabriqué à Marseille ou en Provence</li>
+            <li>Mentions gravées sur le cube</li>
+            <li>Méthode au chaudron traditionnelle</li>
             <li>Sans colorant ni conservateur chimique</li>
           </ul>
         </div>
@@ -167,9 +167,9 @@ include ROOT . '/views/includes/header.php';
           <ul style="color:var(--brun); font-size:0.9rem; line-height:1.8; padding-left:1.2rem;">
             <li>Fabriqué hors de France</li>
             <li>Huiles animales ou graisses industrielles</li>
-            <li>Colorants et parfums de synthese</li>
-            <li>Processus chimique accelere</li>
-            <li>Appellation "style marseillais"</li>
+            <li>Colorants et parfums de synthèse</li>
+            <li>Processus chimique accéléré</li>
+            <li>Appellation « style marseillais »</li>
           </ul>
         </div>
       </div>
@@ -182,20 +182,20 @@ include ROOT . '/views/includes/header.php';
 <section>
   <div class="container">
     <div class="section-header" style="text-align:center;">
-      <h2 class="section-title">Questions frequentes</h2>
+      <h2 class="section-title">Questions fréquentes</h2>
     </div>
     <div class="faq">
       <div class="faq-item">
-        <div class="faq-question">Le savon de Marseille est-il certifie par un label officiel ? <span>+</span></div>
-        <div class="faq-answer">Il n'existe pas de label "Appellation d'Origine Protegee" pour le savon de Marseille, mais l'UPRA (Union Professionnelle des Fabricants de Savon de Marseille) a etabli un cahier des charges strict que respectent les vrais fabricants traditionnels.</div>
+        <div class="faq-question">Le savon de Marseille est-il certifié par un label officiel ? <span>+</span></div>
+        <div class="faq-answer">Il n'existe pas de label "Appellation d'Origine Protegee" pour le savon de Marseille, mais l'UPRA (Union Professionnelle des Fabricants de Savon de Marseille) à établi un cahier des charges strict que respectent les vrais fabricants traditionnels.</div>
       </div>
       <div class="faq-item">
         <div class="faq-question">Quelle est la difference entre savon de Marseille et savon artisanal ? <span>+</span></div>
-        <div class="faq-answer">Le savon de Marseille est une preparation spécifique a base d'huiles végétales (72% minimum), fabriquee selon un procede traditionnel au chaudron. Le savon artisanal est un terme generique qui peut designer tout savon fait main, sans criteres precis de composition.</div>
+        <div class="faq-answer">Le savon de Marseille est une preparation spécifique à base d'huiles végétales (72% minimum), fabriquée selon un procede traditionnel au chaudron. Le savon artisanal est un terme générique qui peut designer tout savon fait main, sans critères précis de composition.</div>
       </div>
       <div class="faq-item">
         <div class="faq-question">Peut-on utiliser le savon de Marseille sur le visage ? <span>+</span></div>
-        <div class="faq-answer">Oui, le savon de Marseille pur vegetal a 72% d'huiles convient pour le visage, notamment les peaux normales a mixtes. Les peaux sensibles ou très seches prefereront un savon surgras. Evitez le contact avec les yeux.</div>
+        <div class="faq-answer">Oui, le savon de Marseille pur végétal à 72% d'huiles convient pour le visage, notamment les peaux normales a mixtes. Les peaux sensibles ou très seches prefereront un savon surgras. Évitez le contact avec les yeux.</div>
       </div>
       <div class="faq-item">
         <div class="faq-question">Combien de temps dure un cube de savon de Marseille ? <span>+</span></div>
@@ -203,7 +203,7 @@ include ROOT . '/views/includes/header.php';
       </div>
       <div class="faq-item">
         <div class="faq-question">Le savon de Marseille est-il biodégradable ? <span>+</span></div>
-        <div class="faq-answer">Oui, le savon de Marseille traditionnel est entierement biodégradable. Il est compose d'huiles végétales saponifiees, sans produits chimiques de synthese, ce qui en fait un excellent choix ecologique pour l'entretien de la maison et du corps.</div>
+        <div class="faq-answer">Oui, le savon de Marseille traditionnel est entierement biodégradable. Il est compose d'huiles végétales saponifiees, sans produits chimiques de synthèse, ce qui en fait un excellent choix ecologique pour l'entretien de la maison et du corps.</div>
       </div>
     </div>
   </div>
@@ -216,18 +216,18 @@ include ROOT . '/views/includes/header.php';
   "mainEntity": [
     {
       "@type": "Question",
-      "name": "Le savon de Marseille est-il certifie par un label officiel ?",
-      "acceptedAnswer": {"@type": "Answer", "text": "Il n'existe pas de label AOP pour le savon de Marseille, mais l'UPRA a etabli un cahier des charges strict que respectent les vrais fabricants traditionnels."}
+      "name": "Le savon de Marseille est-il certifié par un label officiel ?",
+      "acceptedAnswer": {"@type": "Answer", "text": "Il n'existe pas de label AOP pour le savon de Marseille, mais l'UPRA à établi un cahier des charges strict que respectent les vrais fabricants traditionnels."}
     },
     {
       "@type": "Question",
       "name": "Quelle est la difference entre savon de Marseille et savon artisanal ?",
-      "acceptedAnswer": {"@type": "Answer", "text": "Le savon de Marseille est une preparation spécifique a base d'huiles végétales (72% minimum), fabriquee selon un procede traditionnel au chaudron."}
+      "acceptedAnswer": {"@type": "Answer", "text": "Le savon de Marseille est une preparation spécifique à base d'huiles végétales (72% minimum), fabriquée selon un procede traditionnel au chaudron."}
     },
     {
       "@type": "Question",
       "name": "Peut-on utiliser le savon de Marseille sur le visage ?",
-      "acceptedAnswer": {"@type": "Answer", "text": "Oui, le savon de Marseille pur vegetal a 72% d'huiles convient pour le visage, notamment les peaux normales a mixtes."}
+      "acceptedAnswer": {"@type": "Answer", "text": "Oui, le savon de Marseille pur végétal à 72% d'huiles convient pour le visage, notamment les peaux normales a mixtes."}
     }
   ]
 }
