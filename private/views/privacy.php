@@ -15,10 +15,10 @@ include ROOT . '/views/includes/header.php';
     </p>
     
     <div style="text-align:center; background:var(--blanc); padding:2rem; border-radius:var(--radius); border:1px solid var(--bordure);">
-      <img src="/img/legal/politique-confidentialite.png" 
+      <a href="/img/legal/politique-confidentialite.png" target="_blank" title="Cliquer pour agrandir" style="display:block;cursor:zoom-in;"><img src="/img/legal/politique-confidentialite.png" 
            alt="Politique de confidentialite de savon-de-marseille.fr - RGPD, droits des personnes, cookies, sous-traitants"
            style="max-width:100%; height:auto;"
-           loading="lazy">
+           loading="lazy"></a>
       <p style="margin-top:1rem; font-size:0.8rem; color:var(--gris);">
         Si l'image ne s'affiche pas correctement, contactez-nous à : contact@savon-de-marseille.fr
       </p>

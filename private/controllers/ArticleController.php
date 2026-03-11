@@ -60,30 +60,30 @@ class ArticleController {
         }
 
         // Articles recents pour sidebar (exclure article courant)
-        $articlesRecents = $this->model->findLatest(6);
-        $articlesRecents = array_values(array_filter($articlesRecents, function($a) use ($slug) {
+        $articles_recents = $this->model->findLatest(6);
+        $articles_recents = array_values(array_filter($articles_recents, function($a) use ($slug) {
             return $a['slug'] !== $slug;
         }));
-        $articlesRecents = array_slice($articlesRecents, 0, 5);
-        $articlesRecents = array_map(function($a) {
+        $articles_recents = array_slice($articles_recents, 0, 5);
+        $articles_recents = array_map(function($a) {
             return [
                 'slug'           => $a['slug'],
                 'title'          => $a['titre'],
                 'date_published' => $a['date_publication'],
             ];
-        }, $articlesRecents);
+        }, $articles_recents);
 
         // Fabricants sidebar
         $fabricantModel = new Fabricant();
         $allFabricants = $fabricantModel->findAll();
-        $fabricantsSidebar = array_map(function($f) {
+        $fabricants_sidebar = array_map(function($f) {
             return ['slug' => $f['slug'], 'name' => $f['nom'], 'ville' => $f['ville'] ?? ''];
         }, array_slice($allFabricants, 0, 4));
 
         $data = [
             'article'            => $article,
-            'articles_recents'   => $articlesRecents,
-            'fabricants_sidebar' => $fabricantsSidebar,
+            'articles_recents'   => $articles_recents,
+            'fabricants_sidebar' => $fabricants_sidebar,
             'page_title'         => htmlspecialchars($article['titre']) . ' | Savon de Marseille',
             'meta_description'   => htmlspecialchars($article['meta_description'] ?? ''),
             'canonical'          => SITE_URL . '/blog/' . $article['slug'],
