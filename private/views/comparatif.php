@@ -1,7 +1,7 @@
 <?php
 /**
  * views/comparatif.php
- * Comparateur de produits — savon-de-marseille.fr
+ * Comparateur de produits - savon-de-marseille.fr
  *
  * Variables attendues :
  *   $produits  array  [{
@@ -23,14 +23,14 @@ if (!isset($produits)) {
   ];
 }
 
-$page_title       = 'Comparatif Savons de Marseille 2025 — Filtrez par prix, huile, certification';
+$page_title       = 'Comparatif Savons de Marseille 2025 - Filtrez par prix, huile, certification';
 $page_description = 'Comparez les meilleurs savons de Marseille : prix, composition, certifications, fabricants. Filtres dynamiques pour trouver le produit idéal.';
 $page_canonical   = 'https://savon-de-marseille.fr/comparatif/';
 
 // Schema Product array
 $schema_products = array_map(fn($p) => [
   '@type'       => 'Product',
-  'name'        => $p['fabricant_name'] . ' — ' . $p['name'],
+  'name'        => $p['fabricant_name'] . ' - ' . $p['name'],
   'brand'       => ['@type' => 'Brand', 'name' => $p['fabricant_name']],
   'offers'      => ['@type' => 'Offer', 'price' => $p['prix_euros'], 'priceCurrency' => 'EUR', 'url' => 'https://savon-de-marseille.fr' . $p['affiliate_url']],
   'aggregateRating' => ['@type' => 'AggregateRating', 'ratingValue' => $p['note_sur_5'], 'bestRating' => 5, 'reviewCount' => 1],
@@ -168,12 +168,16 @@ include ROOT . '/views/includes/header.php';
             </td>
             <td style="font-weight:700;white-space:nowrap;"><?= number_format($p['prix_euros'], 2, ',', ' ') ?> €</td>
             <td>
+              <?php if (!empty($p['affiliate_url'])): ?>
               <a href="<?= htmlspecialchars($p['affiliate_url']) ?>"
-                 class="btn"
+                 class="btn btn--olive"
                  rel="nofollow sponsored"
                  target="_blank">
-                Acheter
+                Voir sur Amazon
               </a>
+              <?php else: ?>
+              <span class="btn btn--disabled" style="opacity:.45;cursor:not-allowed;">Bientot disponible</span>
+              <?php endif; ?>
             </td>
           </tr>
           <?php endforeach; ?>
