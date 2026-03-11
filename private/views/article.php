@@ -33,7 +33,8 @@ if (!isset($article)) {
   $fabricants_sidebar  = [];
 }
 
-$date_fmt = function($d) { return (new DateTime($d))->format('j F Y'); };
+$mois_fr = ['','janvier','février','mars','avril','mai','juin','juillet','août','septembre','octobre','novembre','décembre'];
+$date_fmt = function($d) use ($mois_fr) { $dt = new DateTime($d); return $dt->format('j') . ' ' . $mois_fr[(int)$dt->format('n')] . ' ' . $dt->format('Y'); };
 
 $page_title       = $article['title'];
 $page_description = $article['excerpt'];
