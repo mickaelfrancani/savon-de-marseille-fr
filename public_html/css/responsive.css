@@ -149,3 +149,21 @@
   body { background: white; color: black; }
   a { color: black; }
 }
+
+/* ── Compat CodeAgent — Mobile ───────────────────────────── */
+@media (max-width: 768px) {
+  .nav-toggle      { display: flex; }
+  .site-nav        { display: none; position: absolute; top: 70px; left: 0; right: 0; background: var(--blanc); flex-direction: column; gap: 0; padding: 1rem 0; box-shadow: 0 8px 24px rgba(61,43,31,.12); z-index: 999; }
+  .site-nav.open   { display: flex; }
+  .site-nav a      { padding: .85rem 1.5rem; border-bottom: 1px solid rgba(200,169,110,.1); width: 100%; }
+  .hero-btns       { flex-direction: column; align-items: flex-start; }
+  .footer-grid     { grid-template-columns: 1fr 1fr; }
+  .footer-grid .footer-brand { grid-column: 1 / -1; }
+  .articles-grid   { grid-template-columns: 1fr; }
+  .fabricants-grid { grid-template-columns: 1fr; }
+}
+@media (max-width: 480px) {
+  .footer-grid     { grid-template-columns: 1fr; }
+  .hero-btns       { width: 100%; }
+  .btn-primary, .btn-outline { width: 100%; text-align: center; }
+}
