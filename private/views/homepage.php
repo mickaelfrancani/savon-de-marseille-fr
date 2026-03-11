@@ -90,6 +90,11 @@ include ROOT . '/views/includes/header.php';
     <div class="articles-grid">
       <?php foreach ($data['derniers_articles'] as $article): ?>
       <article class="article-card">
+        <?php if (!empty($article['image_hero'])): ?>
+        <img src="<?= htmlspecialchars($article['image_hero']) ?>" alt="<?= htmlspecialchars($article['image_alt'] ?? '') ?>" loading="lazy" style="width:100%;aspect-ratio:16/9;object-fit:cover;">
+        <?php else: ?>
+        <img src="/img/hero-guide.jpg" alt="" loading="lazy" style="width:100%;aspect-ratio:16/9;object-fit:cover;">
+        <?php endif; ?>
         <div class="article-card-body">
           <span class="article-tag"><?= htmlspecialchars(ucfirst($article['categorie'])) ?></span>
           <h3><a href="/blog/<?= htmlspecialchars($article['slug']) ?>"><?= htmlspecialchars($article['titre']) ?></a></h3>

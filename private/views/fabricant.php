@@ -71,7 +71,7 @@ include ROOT . '/views/includes/header.php';
 // ──────────────────────────────────────────────────────
 ?>
 
-<div class="fabricant-hero">
+<div class="fabricant-hero" style="background-image: linear-gradient(rgba(61,43,31,0.45), rgba(61,43,31,0.45)), url('/img/fabricant-default.jpg'); background-size: cover; background-position: center;">
   <div class="container">
     <div class="fabricant-header">
 

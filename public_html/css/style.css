@@ -459,7 +459,11 @@ strong { font-weight: 700; }
   background: var(--blanc);
   padding: 2.5rem 0;
   border-bottom: 1px solid rgba(200,169,110,.2);
+  color: var(--blanc);
 }
+.fabricant-hero h1,
+.fabricant-hero .fabricant-meta,
+.fabricant-hero .fabricant-meta a { color: var(--blanc); }
 .fabricant-header { display: flex; gap: 2rem; align-items: flex-start; flex-wrap: wrap; }
 .fabricant-info { flex: 1; min-width: 280px; }
 .fabricant-info h1 { margin-bottom: .5rem; }
@@ -681,6 +685,7 @@ strong { font-weight: 700; }
 
 /* Cards articles compat */
 .articles-grid    { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 1.75rem; }
+.article-card img { width: 100%; aspect-ratio: 16/9; object-fit: cover; display: block; }
 .article-card     { background: var(--blanc); border-radius: var(--radius); box-shadow: var(--shadow); overflow: hidden; transition: box-shadow var(--transition), transform var(--transition); display: flex; flex-direction: column; }
 .article-card:hover { box-shadow: var(--shadow-hover); transform: translateY(-4px); }
 .article-card-body { padding: 1.25rem; flex: 1; display: flex; flex-direction: column; }
