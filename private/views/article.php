@@ -108,7 +108,15 @@ include ROOT . '/views/includes/header.php';
         </div>
 
         <!-- Corps de l'article -->
-        <div class="article-body">
+        <?php if (!empty($article['image_url'])): ?>
+<div class="article-hero-img" style="margin-bottom:2rem;border-radius:10px;overflow:hidden;max-height:440px;">
+  <img src="<?= htmlspecialchars($article['image_url']) ?>"
+       alt="<?= htmlspecialchars($article['title']) ?>"
+       style="width:100%;height:440px;object-fit:cover;display:block;"
+       loading="eager">
+</div>
+<?php endif; ?>
+<div class="article-body">
           <?= $article['content'] /* HTML de confiance, échappé côté BDD */ ?>
         </div>
 

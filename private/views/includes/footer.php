@@ -14,7 +14,7 @@
           <li><a href="/histoire">Histoire</a></li>
           <li><a href="/usages">30 usages</a></li>
           <li><a href="/blog/vrai-faux-savon-de-marseille">Vrai vs Faux</a></li>
-          <li><a href="/blog/fabrication-traditionnelle">Fabrication</a></li>
+          <li><a href="/blog/fabrication-traditionnelle-savon-de-marseille">Fabrication</a></li>
         </ul>
       </div>
       <div class="footer-col">
@@ -32,6 +32,7 @@
         <ul>
           <li><a href="/comparatif">Comparatif</a></li>
           <li><a href="/blog">Blog</a></li>
+          <li><a href="mailto:contact@savon-de-marseille.fr">Contact</a></li>
           <li><a href="/mentions-legales">Mentions legales</a></li>
           <li><a href="/politique-confidentialite">Confidentialite</a></li>
         </ul>

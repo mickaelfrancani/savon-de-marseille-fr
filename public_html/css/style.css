@@ -245,7 +245,9 @@ strong { font-weight: 700; }
    HERO
    ============================================================ */
 .hero {
-  background: linear-gradient(135deg, var(--brun) 0%, #5a3d2b 60%, #7a5a3a 100%);
+  background: linear-gradient(rgba(61,43,31,0.6), rgba(61,43,31,0.55)), url('/img/hero-homepage.jpg');
+  background-size: cover;
+  background-position: center;
   color: var(--blanc);
   padding: 6rem 0;
   position: relative;

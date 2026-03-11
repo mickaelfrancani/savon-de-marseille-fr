@@ -30,7 +30,7 @@ class ArticleController {
             'page'              => $page,
             'limit'             => $limit,
             'page_title'        => 'Blog Savon de Marseille : Guides et Conseils',
-            'meta_description'  => 'Articles sur le savon de Marseille : guides pratiques, conseils d\'utilisation, histoire et fabrication traditionnelle.',
+            'meta_description'  => 'Articles sur le savon de Marseille : guides pratiques, conseils utilisation, histoire et fabrication traditionnelle.',
             'canonical'         => SITE_URL . '/blog',
         ];
         include ROOT . '/views/liste-articles.php';
@@ -59,11 +59,34 @@ class ArticleController {
             return;
         }
 
+        // Articles recents pour sidebar (exclure article courant)
+        $articlesRecents = $this->model->findLatest(6);
+        $articlesRecents = array_values(array_filter($articlesRecents, function($a) use ($slug) {
+            return $a['slug'] !== $slug;
+        }));
+        $articlesRecents = array_slice($articlesRecents, 0, 5);
+        $articlesRecents = array_map(function($a) {
+            return [
+                'slug'           => $a['slug'],
+                'title'          => $a['titre'],
+                'date_published' => $a['date_publication'],
+            ];
+        }, $articlesRecents);
+
+        // Fabricants sidebar
+        $fabricantModel = new Fabricant();
+        $allFabricants = $fabricantModel->findAll();
+        $fabricantsSidebar = array_map(function($f) {
+            return ['slug' => $f['slug'], 'name' => $f['nom'], 'ville' => $f['ville'] ?? ''];
+        }, array_slice($allFabricants, 0, 4));
+
         $data = [
-            'article'          => $article,
-            'page_title'       => htmlspecialchars($article['titre']) . ' | Savon de Marseille',
-            'meta_description' => htmlspecialchars($article['meta_description'] ?? ''),
-            'canonical'        => SITE_URL . '/blog/' . $article['slug'],
+            'article'            => $article,
+            'articles_recents'   => $articlesRecents,
+            'fabricants_sidebar' => $fabricantsSidebar,
+            'page_title'         => htmlspecialchars($article['titre']) . ' | Savon de Marseille',
+            'meta_description'   => htmlspecialchars($article['meta_description'] ?? ''),
+            'canonical'          => SITE_URL . '/blog/' . $article['slug'],
         ];
         include ROOT . '/views/article.php';
     }

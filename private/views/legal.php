@@ -20,7 +20,7 @@ include ROOT . '/views/includes/header.php';
            style="max-width:100%; height:auto;"
            loading="lazy">
       <p style="margin-top:1rem; font-size:0.8rem; color:var(--gris);">
-        Si l'image ne s'affiche pas correctement, veuillez nous contacter a l'adresse indiquee dans nos mentions legales.
+        Si l'image ne s'affiche pas correctement, contactez-nous à : contact@savon-de-marseille.fr
       </p>
     </div>
   </div>
