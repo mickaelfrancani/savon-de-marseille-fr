@@ -1,0 +1,4 @@
+AuthUserFile /home/savonmarseille/web/savon-de-marseille.fr/stats/.htpasswd
+AuthName "Web Statistics"
+AuthType Basic
+Require valid-user

@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+Disallow: /config/
+Disallow: /models/
+Disallow: /controllers/
+Disallow: /includes/
+Disallow: /go/
+
+Sitemap: https://savon-de-marseille.fr/sitemap.xml

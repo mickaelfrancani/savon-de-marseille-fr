@@ -1,0 +1,6 @@
+config/database.php
+logs/
+*.log
+generate_legal_png.py
+__pycache__/
+.env

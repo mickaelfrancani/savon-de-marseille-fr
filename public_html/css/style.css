@@ -1,0 +1,613 @@
+/* =======================================================
+   savon-de-marseille.fr — Feuille de style principale
+   Palette : ocre/beige artisanal provencal
+   ======================================================= */
+
+/* --- Variables CSS --- */
+:root {
+  --ocre:      #C8A96E;
+  --beige:     #F5F0E8;
+  --vert:      #6B7B3A;
+  --brun:      #3D2B1F;
+  --blanc:     #FFFFFF;
+  --gris:      #6B7280;
+  --gris-clair:#F3F4F6;
+  --bordure:   #E5DDD0;
+  --ombre:     rgba(61, 43, 31, 0.08);
+  --radius:    8px;
+  --max-width: 1200px;
+  --font-serif: Georgia, 'Times New Roman', serif;
+  --font-sans:  'Lato', 'Helvetica Neue', Arial, sans-serif;
+}
+
+/* --- Reset --- */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { font-size: 16px; scroll-behavior: smooth; }
+body {
+  font-family: var(--font-sans);
+  background: var(--blanc);
+  color: var(--brun);
+  line-height: 1.7;
+}
+img { max-width: 100%; height: auto; display: block; }
+a { color: var(--vert); text-decoration: none; }
+a:hover { text-decoration: underline; color: var(--brun); }
+
+/* --- Container --- */
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+/* =======================================================
+   HEADER
+   ======================================================= */
+.site-header {
+  background: var(--blanc);
+  border-bottom: 2px solid var(--ocre);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 12px var(--ombre);
+}
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 1.5rem;
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+.site-logo {
+  font-family: var(--font-serif);
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--brun);
+  text-decoration: none;
+  line-height: 1.2;
+}
+.site-logo span {
+  display: block;
+  font-size: 0.75rem;
+  font-weight: 400;
+  color: var(--ocre);
+  font-family: var(--font-sans);
+  letter-spacing: 0.05em;
+}
+.site-nav {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+.site-nav a {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--brun);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  transition: color 0.2s;
+}
+.site-nav a:hover { color: var(--ocre); text-decoration: none; }
+.nav-cta {
+  background: var(--ocre);
+  color: var(--blanc) !important;
+  padding: 0.45rem 1.1rem;
+  border-radius: var(--radius);
+}
+.nav-cta:hover { background: var(--brun); }
+
+/* Hamburger mobile */
+.nav-toggle {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  flex-direction: column;
+  gap: 5px;
+}
+.nav-toggle span {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background: var(--brun);
+  transition: 0.3s;
+}
+
+/* =======================================================
+   HERO
+   ======================================================= */
+.hero {
+  background: linear-gradient(135deg, var(--brun) 0%, #6B4226 60%, var(--ocre) 100%);
+  color: var(--beige);
+  padding: 5rem 1.5rem 4rem;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: url('/img/texture-savon.svg') repeat;
+  opacity: 0.05;
+}
+.hero-inner { position: relative; max-width: 780px; margin: 0 auto; }
+.hero h1 {
+  font-family: var(--font-serif);
+  font-size: clamp(2rem, 5vw, 3.2rem);
+  font-weight: 700;
+  color: var(--blanc);
+  line-height: 1.25;
+  margin-bottom: 1.2rem;
+}
+.hero h1 em {
+  color: var(--ocre);
+  font-style: normal;
+}
+.hero-lead {
+  font-size: 1.15rem;
+  opacity: 0.9;
+  margin-bottom: 2rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.btn {
+  display: inline-block;
+  padding: 0.75rem 2rem;
+  border-radius: var(--radius);
+  font-weight: 700;
+  font-size: 1rem;
+  transition: all 0.2s;
+  cursor: pointer;
+  border: none;
+}
+.btn-primary {
+  background: var(--ocre);
+  color: var(--blanc);
+}
+.btn-primary:hover {
+  background: var(--blanc);
+  color: var(--brun);
+  text-decoration: none;
+}
+.btn-outline {
+  background: transparent;
+  color: var(--beige);
+  border: 2px solid var(--beige);
+}
+.btn-outline:hover {
+  background: var(--beige);
+  color: var(--brun);
+  text-decoration: none;
+}
+.hero-btns {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* =======================================================
+   SECTIONS
+   ======================================================= */
+section { padding: 4rem 0; }
+.section-title {
+  font-family: var(--font-serif);
+  font-size: clamp(1.6rem, 3vw, 2.2rem);
+  color: var(--brun);
+  margin-bottom: 0.5rem;
+}
+.section-subtitle {
+  color: var(--gris);
+  font-size: 1rem;
+  margin-bottom: 2.5rem;
+}
+.section-header {
+  margin-bottom: 2.5rem;
+}
+.bg-beige { background: var(--beige); }
+.bg-brun  { background: var(--brun); color: var(--beige); }
+
+/* =======================================================
+   CARDS ARTICLES
+   ======================================================= */
+.articles-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 2rem;
+}
+.article-card {
+  background: var(--blanc);
+  border: 1px solid var(--bordure);
+  border-radius: var(--radius);
+  overflow: hidden;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.article-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px var(--ombre);
+}
+.article-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+.article-card-body {
+  padding: 1.5rem;
+}
+.article-tag {
+  display: inline-block;
+  background: var(--beige);
+  color: var(--ocre);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 0.25rem 0.6rem;
+  border-radius: 4px;
+  margin-bottom: 0.75rem;
+}
+.article-card h3 {
+  font-family: var(--font-serif);
+  font-size: 1.2rem;
+  color: var(--brun);
+  margin-bottom: 0.6rem;
+  line-height: 1.35;
+}
+.article-card p {
+  color: var(--gris);
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+.article-meta {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.8rem;
+  color: var(--gris);
+  margin-top: 1rem;
+}
+
+/* =======================================================
+   FABRICANTS
+   ======================================================= */
+.fabricants-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+.fabricant-card {
+  background: var(--blanc);
+  border: 1px solid var(--bordure);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.fabricant-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px var(--ombre);
+}
+.fabricant-card h3 {
+  font-family: var(--font-serif);
+  font-size: 1.15rem;
+  color: var(--brun);
+  margin-bottom: 0.3rem;
+}
+.fabricant-card .ville {
+  font-size: 0.82rem;
+  color: var(--ocre);
+  font-weight: 600;
+  margin-bottom: 0.8rem;
+}
+.fabricant-card .annee {
+  font-size: 0.78rem;
+  color: var(--gris);
+}
+.fabricant-card p {
+  font-size: 0.88rem;
+  color: var(--gris);
+  line-height: 1.55;
+  margin-top: 0.7rem;
+}
+.badge {
+  display: inline-block;
+  background: var(--vert);
+  color: var(--blanc);
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 0.2rem 0.55rem;
+  border-radius: 20px;
+  margin-right: 0.3rem;
+  margin-top: 0.5rem;
+}
+.badge-ocre { background: var(--ocre); }
+
+/* =======================================================
+   CARTE LEAFLET
+   ======================================================= */
+#map {
+  height: 480px;
+  border-radius: var(--radius);
+  border: 2px solid var(--bordure);
+  margin-top: 2rem;
+}
+
+/* =======================================================
+   ARTICLE DETAIL
+   ======================================================= */
+.article-hero {
+  background: var(--beige);
+  padding: 3rem 1.5rem 2rem;
+}
+.breadcrumb {
+  font-size: 0.82rem;
+  color: var(--gris);
+  margin-bottom: 1rem;
+}
+.breadcrumb a { color: var(--ocre); }
+.article-header h1 {
+  font-family: var(--font-serif);
+  font-size: clamp(1.8rem, 4vw, 2.8rem);
+  color: var(--brun);
+  line-height: 1.25;
+  margin-bottom: 1rem;
+}
+.article-chapeau {
+  font-size: 1.15rem;
+  color: var(--gris);
+  max-width: 700px;
+}
+.article-body {
+  max-width: 780px;
+  margin: 0 auto;
+  padding: 3rem 1.5rem;
+}
+.article-body h2 {
+  font-family: var(--font-serif);
+  font-size: 1.7rem;
+  color: var(--brun);
+  margin: 2.5rem 0 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid var(--ocre);
+}
+.article-body h3 {
+  font-family: var(--font-serif);
+  font-size: 1.3rem;
+  color: var(--brun);
+  margin: 2rem 0 0.75rem;
+}
+.article-body p {
+  margin-bottom: 1.3rem;
+  color: #3d2b1f;
+  font-size: 1.02rem;
+  line-height: 1.8;
+}
+.article-body ul, .article-body ol {
+  padding-left: 1.5rem;
+  margin-bottom: 1.3rem;
+}
+.article-body li {
+  margin-bottom: 0.5rem;
+  line-height: 1.65;
+}
+.article-body blockquote {
+  border-left: 4px solid var(--ocre);
+  padding: 1rem 1.5rem;
+  margin: 2rem 0;
+  background: var(--beige);
+  border-radius: 0 var(--radius) var(--radius) 0;
+  font-style: italic;
+  color: var(--brun);
+}
+.callout {
+  background: var(--beige);
+  border: 1px solid var(--bordure);
+  border-left: 4px solid var(--vert);
+  padding: 1.2rem 1.5rem;
+  border-radius: 0 var(--radius) var(--radius) 0;
+  margin: 2rem 0;
+}
+.callout-title {
+  font-weight: 700;
+  color: var(--vert);
+  margin-bottom: 0.4rem;
+}
+
+/* =======================================================
+   TABLEAU COMPARATIF
+   ======================================================= */
+.comparatif-filters {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+  background: var(--beige);
+  border-radius: var(--radius);
+}
+.filter-group label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--brun);
+  margin-right: 0.4rem;
+}
+.comparatif-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+}
+.comparatif-table th {
+  background: var(--brun);
+  color: var(--beige);
+  padding: 0.9rem 1rem;
+  text-align: left;
+  font-size: 0.82rem;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+.comparatif-table td {
+  padding: 0.8rem 1rem;
+  border-bottom: 1px solid var(--bordure);
+}
+.comparatif-table tr:hover td {
+  background: var(--beige);
+}
+.check { color: var(--vert); font-weight: 700; }
+.cross { color: #EF4444; font-weight: 700; }
+
+/* =======================================================
+   FOOTER
+   ======================================================= */
+.site-footer {
+  background: var(--brun);
+  color: var(--beige);
+  padding: 3rem 1.5rem 1.5rem;
+}
+.footer-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 2.5rem;
+  max-width: var(--max-width);
+  margin: 0 auto 2rem;
+}
+.footer-brand .logo-footer {
+  font-family: var(--font-serif);
+  font-size: 1.3rem;
+  color: var(--ocre);
+  margin-bottom: 0.8rem;
+  display: block;
+}
+.footer-brand p {
+  font-size: 0.87rem;
+  opacity: 0.8;
+  line-height: 1.65;
+}
+.footer-col h4 {
+  color: var(--ocre);
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 1rem;
+}
+.footer-col ul {
+  list-style: none;
+}
+.footer-col li {
+  margin-bottom: 0.5rem;
+}
+.footer-col a {
+  color: rgba(245, 240, 232, 0.7);
+  font-size: 0.88rem;
+  transition: color 0.2s;
+}
+.footer-col a:hover {
+  color: var(--ocre);
+  text-decoration: none;
+}
+.footer-bottom {
+  border-top: 1px solid rgba(245, 240, 232, 0.15);
+  padding-top: 1.5rem;
+  text-align: center;
+  font-size: 0.8rem;
+  opacity: 0.6;
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+.footer-legal-links {
+  margin-top: 0.5rem;
+}
+.footer-legal-links a {
+  color: rgba(245, 240, 232, 0.6);
+  margin: 0 0.5rem;
+  font-size: 0.78rem;
+}
+
+/* =======================================================
+   PAGINATION
+   ======================================================= */
+.pagination {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 3rem;
+}
+.pagination a, .pagination span {
+  padding: 0.5rem 0.9rem;
+  border: 1px solid var(--bordure);
+  border-radius: var(--radius);
+  font-size: 0.9rem;
+  color: var(--brun);
+  transition: all 0.2s;
+}
+.pagination a:hover { background: var(--ocre); color: var(--blanc); border-color: var(--ocre); text-decoration: none; }
+.pagination .active { background: var(--brun); color: var(--beige); border-color: var(--brun); }
+
+/* =======================================================
+   FAQ SCHEMA
+   ======================================================= */
+.faq { max-width: 780px; margin: 0 auto; }
+.faq-item {
+  border-bottom: 1px solid var(--bordure);
+  padding: 1.2rem 0;
+}
+.faq-question {
+  font-family: var(--font-serif);
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--brun);
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.faq-answer {
+  font-size: 0.95rem;
+  color: var(--gris);
+  padding-top: 0.8rem;
+  line-height: 1.7;
+}
+
+/* =======================================================
+   RESPONSIVE
+   ======================================================= */
+@media (max-width: 768px) {
+  .site-nav {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: var(--blanc);
+    flex-direction: column;
+    padding: 1.5rem;
+    border-top: 1px solid var(--bordure);
+    box-shadow: 0 4px 12px var(--ombre);
+    gap: 1.2rem;
+  }
+  .site-nav.open { display: flex; }
+  .nav-toggle { display: flex; }
+  .site-header { position: relative; }
+  
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  
+  .articles-grid, .fabricants-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .hero { padding: 3rem 1.5rem; }
+  
+  .comparatif-table { font-size: 0.8rem; }
+  .comparatif-table th, .comparatif-table td { padding: 0.6rem 0.5rem; }
+  
+  #map { height: 320px; }
+}
+
+@media (max-width: 480px) {
+  .footer-grid { grid-template-columns: 1fr; }
+  .hero h1 { font-size: 1.7rem; }
+}
