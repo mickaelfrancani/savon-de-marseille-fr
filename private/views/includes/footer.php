@@ -33,16 +33,16 @@
           <li><a href="/comparatif">Comparatif</a></li>
           <li><a href="/blog">Blog</a></li>
           <li><a href="mailto:contact@savon-de-marseille.fr">Contact</a></li>
-          <li><a href="/mentions-legales">Mentions legales</a></li>
-          <li><a href="/politique-confidentialite">Confidentialite</a></li>
+          <li><a href="/mentions-legales/">Mentions légales</a></li>
+          <li><a href="/politique-confidentialité">Confidentialite</a></li>
         </ul>
       </div>
     </div>
     <div class="footer-bottom">
-      <p>&copy; <?= date('Y') ?> Savon de Marseille. Tous droits reserves.</p>
+      <p>&copy; <?= date('Y') ?> Savon de Marseille. Tous droits réservés.</p>
       <div class="footer-legal-links">
-        <a href="/mentions-legales">Mentions legales</a>
-        <a href="/politique-confidentialite">Politique de confidentialite</a>
+        <a href="/mentions-legales/">Mentions légales</a>
+        <a href="/politique-confidentialité">Politique de confidentialité</a>
         <a href="/sitemap.xml">Sitemap</a>
       </div>
     </div>
@@ -61,5 +61,6 @@
   // Init FAQ: hide all answers
   document.querySelectorAll('.faq-answer').forEach(function(a) { a.style.display = 'none'; });
   </script>
+  <script src="/js/main.js" defer></script>
 </body>
 </html>
