@@ -132,9 +132,7 @@ include ROOT . '/views/includes/header.php';
         <?php if (!empty($f['certifications'])): ?>
         <span class="badge"><?= htmlspecialchars($f['certifications']) ?></span>
         <?php endif; ?>
-        <div style="margin-top:1rem;">
-          <a href="/fabricants/<?= htmlspecialchars($f['slug']) ?>" class="btn btn-primary" style="font-size:0.85rem; padding:0.4rem 1rem;">Voir la fiche</a>
-        </div>
+        <a href="/fabricants/<?= htmlspecialchars($f['slug']) ?>/" class="btn btn-primary">Voir la fiche</a>
       </div>
       <?php endforeach; ?>
     </div>
