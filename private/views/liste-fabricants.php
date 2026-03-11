@@ -18,7 +18,7 @@ include ROOT . '/views/includes/header.php';
     </nav>
     <div class="article-header">
       <h1>Annuaire des Fabricants de Savon de Marseille</h1>
-      <p class="article-chapeau"><?= count($data['fabricants']) ?> savonneries authentiques, selectionnees pour leur respect des methodes traditionnelles et la qualite de leurs produits.</p>
+      <p class="article-chapeau"><?= count($data['fabricants']) ?> savonneries authentiques, sélectionnées pour leur respect des méthodes traditionnelles et la qualité de leurs produits.</p>
     </div>
   </div>
 </section>
@@ -30,7 +30,7 @@ include ROOT . '/views/includes/header.php';
       <div class="fabricant-card">
         <h3><a href="/fabricants/<?= htmlspecialchars($f['slug']) ?>"><?= htmlspecialchars($f['nom']) ?></a></h3>
         <div class="ville"><?= htmlspecialchars($f['ville']) ?></div>
-        <?php if ($f['annee_fondation']): ?><div class="annee">Fondee en <?= $f['annee_fondation'] ?></div><?php endif; ?>
+        <?php if ($f['annee_fondation']): ?><div class="annee">Fondée en <?= $f['annee_fondation'] ?></div><?php endif; ?>
         <?php if (!empty($f['description'])): ?>
         <p><?= htmlspecialchars(mb_substr($f['description'], 0, 130)) ?>...</p>
         <?php endif; ?>

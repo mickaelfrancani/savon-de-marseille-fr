@@ -125,7 +125,7 @@ include ROOT . '/views/includes/header.php';
       <div class="fabricant-card">
         <h3><?= htmlspecialchars($f['nom']) ?></h3>
         <div class="ville"><?= htmlspecialchars($f['ville']) ?></div>
-        <?php if ($f['annee_fondation']): ?><div class="annee">Fondee en <?= $f['annee_fondation'] ?></div><?php endif; ?>
+        <?php if ($f['annee_fondation']): ?><div class="annee">Fondée en <?= $f['annee_fondation'] ?></div><?php endif; ?>
         <?php if (!empty($f['description'])): ?>
         <p><?= htmlspecialchars(mb_substr($f['description'], 0, 110)) ?>...</p>
         <?php endif; ?>
