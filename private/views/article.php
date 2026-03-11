@@ -62,8 +62,7 @@ $breadcrumb = [
   ['label' => $article['title']],
 ];
 
-include __DIR__ . '/../includes/header.php';
-include __DIR__ . '/../includes/nav.php';
+include ROOT . '/views/includes/header.php';
 ?>
 
 <main class="section">
@@ -176,4 +175,4 @@ include __DIR__ . '/../includes/nav.php';
   </div>
 </main>
 
-<?php include __DIR__ . '/../includes/footer.php'; ?>
+<?php include ROOT . '/views/includes/footer.php'; ?>

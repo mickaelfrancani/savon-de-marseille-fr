@@ -43,8 +43,7 @@ $page_schema = json_encode([
 
 $breadcrumb = [['label' => 'Comparatif']];
 
-include __DIR__ . '/../includes/header.php';
-include __DIR__ . '/../includes/nav.php';
+include ROOT . '/views/includes/header.php';
 ?>
 
 <div class="page-header">
@@ -190,4 +189,4 @@ include __DIR__ . '/../includes/nav.php';
   </div>
 </main>
 
-<?php include __DIR__ . '/../includes/footer.php'; ?>
+<?php include ROOT . '/views/includes/footer.php'; ?>

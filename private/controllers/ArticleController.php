@@ -38,6 +38,21 @@ class ArticleController {
 
     public function show(string $slug): void {
         $article = $this->model->findBySlug($slug);
+        // Map DB fields to view-expected keys
+        if ($article) {
+            $article = array_merge($article, [
+                'title'          => $article['titre'],
+                'content'        => $article['contenu'],
+                'excerpt'        => $article['chapeau'] ?? $article['meta_description'] ?? '',
+                'author'         => 'La Redaction',
+                'date_published' => $article['date_publication'],
+                'date_modified'  => $article['updated_at'] ?? $article['date_publication'],
+                'category_label' => ucfirst($article['categorie'] ?? ''),
+                'category_slug'  => $article['categorie'] ?? '',
+                'image_url'      => $article['image_hero'] ?? '',
+                'tags'           => [],
+            ]);
+        }
         if (!$article) {
             http_response_code(404);
             include ROOT . '/views/404.php';

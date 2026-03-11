@@ -60,8 +60,7 @@ $breadcrumb = [
   ['label' => $fabricant['name']],
 ];
 
-include __DIR__ . '/../includes/header.php';
-include __DIR__ . '/../includes/nav.php';
+include ROOT . '/views/includes/header.php';
 
 // Leaflet CSS dans <head> : on l'injecte ici proprement
 ?>
@@ -221,4 +220,4 @@ include __DIR__ . '/../includes/nav.php';
   </div>
 </main>
 
-<?php include __DIR__ . '/../includes/footer.php'; ?>
+<?php include ROOT . '/views/includes/footer.php'; ?>

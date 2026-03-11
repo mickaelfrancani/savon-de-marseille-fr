@@ -713,3 +713,11 @@ strong { font-weight: 700; }
 .faq-answer       { padding: 0 1.25rem 1.1rem; font-size: .92rem; color: #6b5a4e; display: none; }
 .faq-item.open .faq-answer { display: block; }
 .faq-item.open .faq-question { color: var(--olive); }
+
+/* ── Boutons variantes CodeAgent ─────────────────────────── */
+.btn-primary  { background: var(--ocre); color: var(--brun); border: 2px solid var(--ocre); border-radius: 4px; padding: .75rem 1.75rem; font-weight: 700; font-family: var(--font-body); display: inline-block; transition: background var(--transition); }
+.btn-primary:hover { background: var(--ocre-dark); border-color: var(--ocre-dark); color: var(--blanc); }
+.btn-secondary { background: transparent; color: rgba(253,250,245,.9); border: 2px solid rgba(253,250,245,.5); border-radius: 4px; padding: .75rem 1.75rem; font-weight: 700; font-family: var(--font-body); display: inline-block; transition: border-color var(--transition), background var(--transition); }
+.btn-secondary:hover { border-color: var(--blanc); background: rgba(253,250,245,.1); color: var(--blanc); }
+.btn-buy      { background: var(--olive); color: var(--blanc); border: 2px solid var(--olive); border-radius: 4px; padding: .6rem 1.25rem; font-weight: 700; font-family: var(--font-body); font-size: .88rem; display: inline-block; transition: background var(--transition); }
+.btn-buy:hover { background: #55622e; border-color: #55622e; color: var(--blanc); }
