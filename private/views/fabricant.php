@@ -60,13 +60,10 @@ $breadcrumb = [
   ['label' => $fabricant['name']],
 ];
 
-include ROOT . '/views/includes/header.php';
+$extra_head  = '<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">';
+$extra_head .= '<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV/XN/WLEg=" crossorigin="" defer></script>';
 
-// Leaflet CSS dans <head> : on l'injecte ici proprement
-?>
-<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
-<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV/XN/WLEg=" crossorigin="" defer></script>
-<?php
+include ROOT . '/views/includes/header.php';
 
 // ──────────────────────────────────────────────────────
 ?>
@@ -147,7 +144,7 @@ include ROOT . '/views/includes/header.php';
       <!-- Description -->
       <div>
         <h2>À propos de <?= htmlspecialchars($fabricant['name']) ?></h2>
-        <div class="article-body">
+        <div class="article-body" style="line-height:1.8; font-size:1rem;">
           <?= $fabricant['description'] ?>
         </div>
 
@@ -189,7 +186,7 @@ include ROOT . '/views/includes/header.php';
           <div style="margin-top:.75rem;">
             <a href="<?= htmlspecialchars($fabricant['site_web']) ?>"
                style="font-size:.82rem;color:#8a7060;"
-               rel="nofollow"
+               rel="nofollow noopener"
                target="_blank">
               <?= htmlspecialchars(parse_url($fabricant['site_web'], PHP_URL_HOST) ?: $fabricant['site_web']) ?>
             </a>

@@ -44,6 +44,7 @@
   <?php if (!empty($data['schema_json'])): ?>
   <script type="application/ld+json"><?= $data['schema_json'] ?></script>
   <?php endif; ?>
+<?php if (!empty($extra_head)) echo $extra_head; ?>
 </head>
 <body>
   <header class="site-header">
