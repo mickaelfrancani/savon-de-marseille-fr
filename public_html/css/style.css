@@ -738,3 +738,6 @@ strong { font-weight: 700; }
   width: fit-content;
   margin: auto auto 0;
 }
+
+/* Colonne Acheter masquée temporairement (affiliation en cours) */
+.col-acheter { display: none; }

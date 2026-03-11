@@ -127,7 +127,7 @@ include ROOT . '/views/includes/header.php';
             <th data-sort="cert">Certif. <span class="sort-icon">↕</span></th>
             <th data-sort="note">Note <span class="sort-icon">↕</span></th>
             <th data-sort="prix">Prix <span class="sort-icon">↕</span></th>
-            <th>Acheter</th>
+            <th class="col-acheter">Acheter</th>
           </tr>
         </thead>
         <tbody>
@@ -167,7 +167,7 @@ include ROOT . '/views/includes/header.php';
               </span>
             </td>
             <td style="font-weight:700;white-space:nowrap;"><?= number_format($p['prix_euros'], 2, ',', ' ') ?> €</td>
-            <td>
+            <td class="col-acheter">
               <?php if (!empty($p['affiliate_url'])): ?>
               <a href="<?= htmlspecialchars($p['affiliate_url']) ?>"
                  class="btn btn--olive"
