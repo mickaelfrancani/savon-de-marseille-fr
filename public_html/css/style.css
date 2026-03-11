@@ -670,7 +670,7 @@ strong { font-weight: 700; }
 .nav-cta:hover    { background: var(--ocre-dark); color: var(--blanc) !important; }
 
 /* Hero compat */
-.hero-btns        { display: flex; gap: 1rem; flex-wrap: wrap; }
+.hero-btns        { display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center; }
 .hero-lead        { font-size: clamp(1rem, 2.5vw, 1.15rem); color: rgba(253,250,245,.85); margin-bottom: 2rem; line-height: 1.6; }
 .btn-primary      { display: inline-block; padding: .75rem 1.75rem; background: var(--ocre); color: var(--brun); font-weight: 700; border-radius: 4px; border: 2px solid var(--ocre); transition: background var(--transition); }
 .btn-primary:hover{ background: var(--ocre-dark); border-color: var(--ocre-dark); color: var(--blanc); }
@@ -728,3 +728,12 @@ strong { font-weight: 700; }
 .btn-secondary:hover { border-color: var(--blanc); background: rgba(253,250,245,.1); color: var(--blanc); }
 .btn-buy      { background: var(--olive); color: var(--blanc); border: 2px solid var(--olive); border-radius: 4px; padding: .6rem 1.25rem; font-weight: 700; font-family: var(--font-body); font-size: .88rem; display: inline-block; transition: background var(--transition); }
 .btn-buy:hover { background: #55622e; border-color: #55622e; color: var(--blanc); }
+
+/* Boutons cards centrés */
+.card .btn,
+.card-fabricant .btn,
+.card a.btn {
+  display: block;
+  width: fit-content;
+  margin: auto auto 0;
+}
